@@ -22,10 +22,10 @@ export class MyApp {
       const authObserver = af.auth.subscribe( user => {
         if (user) {
           this.rootPage = HomePage;
-          authObserver.unsubscribe();
+          // authObserver.unsubscribe();
         } else {
           this.rootPage = Login;
-          authObserver.unsubscribe();
+          // authObserver.unsubscribe();
         }
       });
     });

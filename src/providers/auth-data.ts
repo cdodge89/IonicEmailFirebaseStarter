@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+//import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 import { AngularFire } from 'angularfire2';
@@ -8,11 +8,12 @@ import firebase from 'firebase';
 @Injectable()
 export class AuthData {
   fireAuth: any;
-  constructor(public http: Http, public af: AngularFire) {
+  constructor(/*public http: Http,*/ public af: AngularFire) {
     af.auth.subscribe( user => {
         if (user) {
             this.fireAuth = user.auth;
             console.log(user);
+            
         }
     });
   }
